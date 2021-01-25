@@ -1,18 +1,19 @@
 
 import BreedImage from '../components/BreedImg';
+import styles from '../styles/Dog.module.scss'
 
 export default function Dogs({ breeds }) {
-    const List = () => <ul>
+    const List = () => <div className={styles.listDogs}>
         {
             Object.keys(breeds).map(
                 (breedName, index) => {
-                return <li key={index}>
+                return <div key={index}>
                     <BreedImage name={breedName} />
-                </li>
+                </div>
                 }
             )
         }
-    </ul>
+    </div>
     return <div>
         <List />
     </div>
