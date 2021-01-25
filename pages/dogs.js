@@ -2,7 +2,7 @@
 export default function Dogs({ breeds }) {
     const List = () => <ul>
         {
-            Object.keys(breeds).map((dogName, index) => <li>{dogName}</li>)
+            Object.keys(breeds).map((breedName, index) => <li key={index}>{breedName}</li>)
         }
     </ul>
     return <div>
