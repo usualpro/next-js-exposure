@@ -1,8 +1,16 @@
 
+import BreedImage from '../components/BreedImg';
+
 export default function Dogs({ breeds }) {
     const List = () => <ul>
         {
-            Object.keys(breeds).map((breedName, index) => <li key={index}>{breedName}</li>)
+            Object.keys(breeds).map(
+                (breedName, index) => {
+                return <li key={index}>
+                    <BreedImage name={breedName} />
+                </li>
+                }
+            )
         }
     </ul>
     return <div>
